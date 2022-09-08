@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Used Car Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css"> 
+</head>
+<body>
+<div class="img"></div>
+	<h1 align = "center"> Used Car Price Prediction </h1>
+	<h3>Please enter your used car details to predict it's selling price!</h3>
+<form class="form">
+	<h2>Name</h2>
+	<div>
+    <select class="Name" name="" id="uiNames">
+    <option value="" disabled="disabled" selected="selected">Choose a brand and model of the car</option>
+		<option>Maruti Wagon R LXI CNG</option>
+        <option>Audi A4 New 2.0 TDI Multitronic</option>
+    </select>
+    </div>
+
+	<h2>Power (bhp)</h2>
+    <input class="power"  type="text" id="uiPOWER" class="floatLabel" name="powerbhp" value="1000">
+	<h2>Mileage (Kmpl or Km/Kg)</h2>
+    <input class="mileage"  type="text" id="uiMileage" class="floatLabel" name="kmpl" value="15">
+	<h2>Engine (cc)</h2>
+    <input class="engine"  type="text" id="uiEngine" class="floatLabel" name="cc" value="100">
+	
+	<h2>Kilometer_Drive (Km)</h2>
+    <input class="kilometer_Drive"  type="text" id="uiDrivekm" class="floatLabel" name="kilometer" value="75000">
+	</form>
+	
+	
+<form class="form" >	
+	<h2>Year</h2>
+    <input class="year"  type="text" id="uiYear" class="floatLabel" name="year_n" value="2010">
+	<h2>Seats</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-seats-1" name="uiSEATS" value="1"checked/>
+		<label for="radio-seats-1">1</label>
+		<input type="radio" id="radio-seats-2" name="uiSEATS" value="2"/>
+		<label for="radio-seats-2">2</label>
+		<input type="radio" id="radio-seats-3" name="uiSEATS" value="3"/>
+		<label for="radio-seats-3">3</label>
+		<input type="radio" id="radio-seats-4" name="uiSEATS" value="4"/>
+		<label for="radio-seats-4">4</label>
+		<input type="radio" id="radio-seats-5" name="uiSEATS" value="5"/>
+		<label for="radio-seats-5">5</label>
+	</div>
+		
+
+	<h2>Transmission</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-trans-1" name="uiTransmission" value="1"/>
+		<label for="radio-trans-1">Automatic</label>
+		<input type="radio" id="radio-trans-2" name="uiTransmission" value="2" checked/>
+		<label for="radio-trans-2">Manual</label>
+	</div>
+	
+	<h2>Fuel_type</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-fuel-1" name="uiFuel_type" value="1"/>
+		<label for="radio-fuel-1">CNG</label>
+		<input type="radio" id="radio-fuel-2" name="uiFuel_type" value="2"/>
+		<label for="radio-fuel-2">Diesel</label>
+		<input type="radio" id="radio-fuel-3" name="uiFuel_type" value="3"/>
+		<label for="radio-fuel-3">LPG</label>
+		<input type="radio" id="radio-fuel-4" name="uiFuel_type" value="4" checked/>
+		<label for="radio-fuel-4">Petrol</label>
+	</div>	
+		
+	<h2>Owner_type</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-owner-1" name="uiOwner_type" value="1"checked/>
+		<label for="radio-owner-1">First</label>
+		<input type="radio" id="radio-owner-2" name="uiOwner_type" value="2" />
+		<label for="radio-owner-2">Second</label>
+		<input type="radio" id="radio-owner-3" name="uiOwner_type" value="3"/>
+		<label for="radio-owner-3">Third</label>
+		<input type="radio" id="radio-owner-4" name="uiOwner_type" value="4"/>
+		<label for="radio-owner-4">Fourth & Above</label>
+	</div>		
+	</form>
+	
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button" >Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+
+</body>
+</html>
